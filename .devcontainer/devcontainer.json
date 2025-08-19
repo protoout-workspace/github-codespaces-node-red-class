@@ -1,0 +1,15 @@
+{
+  "postAttachCommand": {
+    "install": "npm i -g node-red@4.1.0"
+  },
+  "forwardPorts": [1880],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.autoSave": "afterDelay",
+        "files.autoSaveDelay": 300,
+        "remote.autoForwardPorts": false
+      }
+    }
+  }
+}
