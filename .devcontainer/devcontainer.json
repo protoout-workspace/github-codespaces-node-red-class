@@ -1,6 +1,6 @@
 {
   "postAttachCommand": {
-    "install": "npm i -g node-red@4.1.0"
+    "install": "npm install -g npm@latest & npm i -g node-red@4.1.0"
   },
   "forwardPorts": [1880],
   "customizations": {
