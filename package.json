@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node-red -D editorTheme.tours=false -D editorTheme.projects.enabled=true -D editorTheme.projects.workflow.mode='auto' -D httpRequestTimeout=600000 -D notify.message='This environment will be terminated within 10 minutes. Please download your flow immediately.' -D notify.timer=13800000"
+    "kill": "pkill -9 -f node-red 2>/dev/null || true; for p in 1880 3000 11434; do fuser -k ${p}/tcp 2>/dev/null || true; done",
+    "port-publish": "gh codespace ports visibility 1880:public -c $CODESPACE_NAME",
+    "start": "npm run port-publish && node-red -D editorTheme.tours=false -D editorTheme.projects.enabled=true -D editorTheme.projects.workflow.mode='auto' -D httpRequestTimeout=600000 -D notify.message='This environment will be terminated within 10 minutes. Please download your flow immediately.' -D notify.timer=13800000"
   },
   "repository": {
     "type": "git",
