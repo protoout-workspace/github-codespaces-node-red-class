@@ -1,6 +1,5 @@
 {
   "postCreateCommand": "npm i -g npm@latest && npm i -g node-red@4.1.0",
-  "postStartCommand": "bash -lc 'command -v node-red >/dev/null || npm i -g node-red@4.1.0'",
   "forwardPorts": [1880],
   "portsAttributes": {
     "1880": {
