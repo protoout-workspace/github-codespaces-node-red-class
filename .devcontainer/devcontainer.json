@@ -2,7 +2,22 @@
   "postAttachCommand": {
     "install": "npm install -g npm@latest & npm i -g node-red@4.1.0"
   },
-  "forwardPorts": [1880],
+  "forwardPorts": [1880,3000,11434],
+  "portsAttributes": {
+    "1880": {
+      "label": "Node-RED",
+      "visibility": "public"
+    },
+    "3000": {
+      "label": "App",
+      "onAutoForward": "openPreview",
+      "visibility": "public"
+    },
+    "11434": {
+      "label": "ollama",
+      "visibility": "public"
+    },
+  },
   "customizations": {
     "vscode": {
       "settings": {
